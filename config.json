@@ -1,0 +1,52 @@
+{
+  "threshold": 0.23635860938278663,
+  "threshold_F1": 0.28654953755693174,
+  "threshold_R": 0.23635860938278663,
+  "feature_names": [
+    "fixed_acidity",
+    "volatile_acidity",
+    "citric_acid",
+    "residual_sugar",
+    "chlorides",
+    "free_sulfur_dioxide",
+    "total_sulfur_dioxide",
+    "density",
+    "pH",
+    "sulphates",
+    "alcohol",
+    "is_red"
+  ],
+  "selection_rule": "unweighted_LR_with_validation_recall_constraint",
+  "model_name": "StandardScaler + LogisticRegression, без весов",
+  "target_definition": "target=1: экспертная оценка вина не ниже 7",
+  "random_state": 42,
+  "validation": {
+    "precision": 0.4261168384879725,
+    "recall": 0.7045454545454546,
+    "F1": 0.5310492505353318
+  },
+  "test_metrics": {
+    "порог": 0.23635860938278663,
+    "accuracy": 0.7600250626566416,
+    "precision": 0.421259842519685,
+    "recall": 0.7062706270627063,
+    "F1": 0.5277435265104808,
+    "ROC-AUC": 0.8208760551229137,
+    "PR-AUC": 0.48476554851347986
+  },
+  "training": {
+    "raw_rows": 6497,
+    "duplicates_removed": 1177,
+    "clean_rows": 5320,
+    "train_rows": 3724,
+    "test_rows": 1596,
+    "prevalence_train": 0.1895810955961332
+  },
+  "versions": {
+    "python": "3.12.14",
+    "scikit-learn": "1.8.0",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "joblib": "1.5.3"
+  }
+}
